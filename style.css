@@ -1,0 +1,215 @@
+:root{
+    --primary:rebeccapurple;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.flyer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height:630px ;
+    width:450px ;
+    background-color:var(--primary);
+    overflow: hidden;
+}
+/* #####################flyer Background########## */
+.flyer .background .top-oval{
+    height:400px ;
+    width: 500px;
+    background:linear-gradient(to bottom,rgb(167, 3, 3) 30%,rgb(230, 120, 18));
+    border-radius: 40%;
+    position: absolute;
+    top: -33%;
+    left: -5%;
+    border-bottom: 10px solid var(--primary);
+    box-shadow: 0 0 0 10px white;
+    overflow: hidden;
+}
+.background .top-oval img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    position: absolute;
+    bottom: -6em;
+    right: -1em;
+    opacity: 0.6;
+}
+.flyer .background .bottom{
+    position: absolute;
+    height:450px ;
+    width: 500px;
+    background:linear-gradient(white 20%,rgb(148, 147, 147));
+    left: -5%;
+    bottom:-22% ;
+    border-radius: 45%;
+}
+.background .bottom::after,.background .bottom::before{
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    top: -2em;
+    box-shadow: 0 0 0 5px var(--primary);
+    border-bottom: 4px solid white;
+}
+.background .bottom::after{
+    right: 3em;
+    border-left: 4px solid white;
+}
+.background .bottom::before{
+    left: 3em;
+    
+    border-right: 4px solid white;
+}
+.straightline{
+    position: absolute;
+    left: 0;
+    bottom: 3em;
+    height:2px;
+    width: 100%;
+    background-color: var(--primary);
+    
+}
+
+/* ###########################Food Lis##t############### */
+.food-list{
+    z-index:4;
+    position: absolute;
+    bottom: 5.5em;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.food-list .food{
+    position: relative;
+    width:120px;
+    height: 120px;
+    background:white;
+    border:2px dotted var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.food-list .food img{
+    width: 95%;
+    height: 95%;
+    border: 5px solid var(--primary);
+    border-radius: 50%;
+}
+.food-list .food span{
+    position: absolute;
+    color: black;
+    bottom: -2.5em;
+    height: 2em;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* #########################TITLE################## */
+.title{
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 10;
+    position: absolute;
+    top: 1em;
+    left: 0.5em;
+    font-size: 3.2em;
+    font-weight: bold;  
+    color: white;
+    text-shadow: 0 0  3px blue;
+}
+.title span{
+    display: block;
+    position: absolute;
+    top: 1.2em;
+    right: -2.5em;
+    color:yellow;
+    font-size: smaller;
+}
+
+/* ########################Flyer MIdddle Section############ */
+.discount,.twentyfour-seven{
+    position: absolute;
+    top:46%;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index:10;
+    text-align: center;
+    font-weight: 900;
+    color: yellow;
+    font-size: 1.5em;
+    text-shadow: 1px 1px  3px rgb(230, 120, 18); 
+}
+.discount{
+    right:1em ;
+}
+.twentyfour-seven{
+    left: 1.2em;
+}
+.small-image{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    z-index: 10;
+    background: white;
+    top: 37%;
+}
+.small-image img{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left:5%;
+}
+.small-image span{
+    position: absolute;
+    bottom: -1.5em;
+    left: 20%;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration:underline;
+    text-decoration-color: orangered;
+}
+
+
+/* ###############################Contact Section$############### */
+.contact-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3em;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    justify-content: space-between;
+}
+.contact-info img{
+    height: 1.3em;
+    width: 1.3em;
+    margin-right: 0.5em
+}
